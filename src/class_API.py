@@ -46,8 +46,8 @@ class SuperJobAPI(VacanciesAPI):
 
 class HeadHunterAPI(VacanciesAPI):
     """
-        Класс для работы с сервисом HeadHunter по API
-        """
+    Класс для работы с сервисом HeadHunter по API
+    """
     def __init__(self):
         self.vacancies_list = []
         self.area = '113'  # Поиск ощуществляется по вакансиям РФ
@@ -78,14 +78,3 @@ class HeadHunterAPI(VacanciesAPI):
         for self.page in range(0, 20):
             vacancies_in_page = get_headhunter_request(params)['items']
             self.vacancies_list += vacancies_in_page
-
-
-# hh = HeadHunterAPI()
-# hh.get_vacancies('python')
-# for i in range(0, 3):
-#     print(hh.vacancies_list[i])
-#
-# superjob = SuperJobAPI()
-# superjob.get_vacancies('python')
-# for i in range(0, 3):
-#     print(superjob.vacancies_list[i])

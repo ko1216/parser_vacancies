@@ -1,5 +1,6 @@
 from src.class_API import HeadHunterAPI, SuperJobAPI
 from src.class_json import JsonSaver
+from src.print_json import print_json
 
 
 def user_interaction():
@@ -30,8 +31,9 @@ def user_interaction():
     json_saver.add_vacancy(vacancies_list)
 
     user_salary_choice = int(input('Введите ожидаемую сумму зарплаты: '))
-
     json_saver.get_vacancies_by_salary(user_salary_choice)
+
+    print_json(json_saver.filename)
 
 
 if __name__ == '__main__':

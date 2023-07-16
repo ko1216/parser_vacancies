@@ -21,7 +21,7 @@ class SuperJobAPI(VacanciesAPI):
         self.page = 0  # номер страницы поиска
         self.vacancies_count = 100  # максимальное значение выдачи результатов поиска
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'''Параметры поиска вакансий при инциализации класса:
         Раздел поиска: IT и связь. id: {self.catalogue_id} - int
         Нумерация страницы начинается с {self.page} - int
@@ -55,7 +55,7 @@ class HeadHunterAPI(VacanciesAPI):
         self.per_page = '100'  # Кол-во вакансий на 1 странице
         self.only_with_salary = True
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'''Параметры поиска вакансий при инциализации класса:
         Поиск осуществляется на тер-рии РФ. id: {self.area} - str
         Нумерация страницы начинается с {self.page} - int

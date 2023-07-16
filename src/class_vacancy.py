@@ -38,7 +38,7 @@ class Vacancy:
 
         self.all_vacancies.append(self)
 
-    def get_max_salary(self):
+    def get_max_salary(self) -> int:
         """
         Метод вытаскивает максимально значение ЗП вакансии, если оно указано
         :return: возвращает максимальное значение ЗП или 0, если ее нет
@@ -52,7 +52,7 @@ class Vacancy:
         else:
             return 0
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'''Вакансия: {self.name}
         Ссылка на вакансию: {self.url}
         Зарплата от: {self.salary_from}

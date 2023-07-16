@@ -6,7 +6,7 @@ load_dotenv()
 superjob_api_key: str = os.getenv('SUPERJOB_API_KEY')
 
 
-def get_superjob_request(url_params=None, relative_url='vacancies/'):
+def get_superjob_request(url_params=None, relative_url='vacancies/') -> dict:
     """
     Функция возвращает ответ с сервера SuperJob, по умолчанию это все вакансии сайта со всеми критериями вакансии
     :param url_params: по умолчанию это None аргумент. Подразумевает переачу словаря для сужения поиска вакансии (город,
@@ -22,7 +22,7 @@ def get_superjob_request(url_params=None, relative_url='vacancies/'):
     return response_json
 
 
-def get_headhunter_request(url_params=None):
+def get_headhunter_request(url_params=None) -> dict:
     """
     Функция делает запрос к HeadHunter через url запрос, возвращает словарь вакансий
     :param url_params: параметры url запроса, документация запроса нах-ся в документации API HeadHunter
